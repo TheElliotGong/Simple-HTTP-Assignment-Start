@@ -52,5 +52,5 @@ const onRequest = (request, response) => {
 
 // Set up the request handler when the server is created.
 http.createServer(onRequest).listen(port, () => {
-  // console.log(`Listening on 127.0.0.1:${port}`);
+  console.log(`Listening on 127.0.0.1:${port}`);
 });
