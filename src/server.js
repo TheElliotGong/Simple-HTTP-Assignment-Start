@@ -19,7 +19,7 @@ const port = process.env.Port || process.env.NODE_PORT || 3000;
  * @param {*} response
  */
 const onRequest = (request, response) => {
-  // console.log(request.url);
+  console.log(request.url);
 
   // Produce different responses depending on the end url on the server.
   switch (request.url) {
