@@ -6,21 +6,14 @@ const getTimeString = () => {
   return dateString;
 };
 
-const getTime = (request, response) => {
+const getMessage = (request, response, message) => {
   response.writeHead(200, { 'Content-Type': 'text/plain' });
-  response.write(getTimeString());
-  response.end();
-};
-
-const getHello = (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'text/plain' });
-  response.write(hello);
+  response.write(message);
   response.end();
 };
 
 module.exports = {
   hello,
-  getHello,
-  getTime,
   getTimeString,
+  getMessage,
 };

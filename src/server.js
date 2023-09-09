@@ -10,28 +10,28 @@ const onRequest = (request, response) => {
   // console.log(request.url);
   switch (request.url) {
     case '/':
-      htmlHandler.getIndex(request, response);
+      htmlHandler.getPage(request, response, htmlHandler.index);
       break;
     case '/page2':
-      htmlHandler.getPage2(request, response);
+      htmlHandler.getPage(request, response, htmlHandler.page2);
       break;
     case '/hello':
-      textHandler.getHello(request, response);
+      textHandler.getMessage(request, response, textHandler.hello);
       break;
     case '/time':
-      textHandler.getTime(request, response);
+      textHandler.getMessage(request, response, textHandler.getTimeString());
       break;
     case '/helloJSON':
-      jsonHandler.getHelloJSON(request, response);
+      jsonHandler.getJSONMessage(request, response, { message: jsonHandler.text.hello });
       break;
     case '/timeJSON':
-      jsonHandler.getTimeJSON(request, response);
+      jsonHandler.getTimeJSON(request, response, { time: jsonHandler.text.getTimeString() });
       break;
     case '/dankmemes':
       imageHandler.getImage(request, response);
       break;
     default:
-      htmlHandler.getIndex(request, response);
+      htmlHandler.getPage(request, response, htmlHandler.index);
       break;
   }
 };

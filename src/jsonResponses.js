@@ -1,5 +1,12 @@
 const text = require('./textResponses.js');
 
+const getJSONMessage = (request, response, message) => {
+  const stringMessage = JSON.stringify(message);
+  response.writeHead(200, { 'Content-Type': 'application/json' });
+  response.write(stringMessage);
+  response.end();
+};
+
 const getHelloJSON = (request, response) => {
   const helloJSON = { message: text.hello };
   const stringMessage = JSON.stringify(helloJSON);
@@ -18,3 +25,6 @@ const getTimeJSON = (request, response) => {
 
 module.exports.getHelloJSON = getHelloJSON;
 module.exports.getTimeJSON = getTimeJSON;
+module.exports = {
+  getJSONMessage, text,
+};
