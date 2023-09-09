@@ -11,7 +11,7 @@ const textHandler = require('./textResponses.js');
 const jsonHandler = require('./jsonResponses.js');
 const imageHandler = require('./imageResponses.js');
 
-const port = process.env.Port || process.env.NODE_PORT || 3000;
+const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
 /**
  * This function handles server responses to browser requests.
