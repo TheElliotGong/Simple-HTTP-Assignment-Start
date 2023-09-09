@@ -1,3 +1,9 @@
+/*
+Author: Elliot Gong
+Date: 9/9/2023
+Purpose: Handle server responses that utilize image files.
+*/
+
 const fs = require('fs');
 // Import the desired img file.
 const img = fs.readFileSync(`${__dirname}/../client/spongegar.png`);

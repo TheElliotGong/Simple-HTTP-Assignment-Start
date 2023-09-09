@@ -1,3 +1,9 @@
+/*
+Author: Elliot Gong
+Date: 9/9/2023
+Purpose: Handle server responses that utilize html files.
+*/
+
 // include fs module for reading files.
 const fs = require('fs');
 
