@@ -19,7 +19,7 @@ const port = process.env.PORT || process.env.NODE_PORT || 3000;
  * @param {*} response
  */
 const onRequest = (request, response) => {
-  console.log(request.url);
+  // console.log(request.url);
 
   // Produce different responses depending on the end url on the server.
   switch (request.url) {
@@ -52,5 +52,5 @@ const onRequest = (request, response) => {
 
 // Set up the request handler when the server is created.
 http.createServer(onRequest).listen(port, () => {
-  console.log(`Listening on 127.0.0.1:${port}`);
+  // console.log(`Listening on 127.0.0.1:${port}`);
 });
