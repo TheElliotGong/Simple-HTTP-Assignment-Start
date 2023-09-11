@@ -2,7 +2,7 @@
   "name": "http-assignment",
   "version": "1.0.0",
   "description": "Using http for server stuff",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
     "pretest": "eslint ./src --fix",
